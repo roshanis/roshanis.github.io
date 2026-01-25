@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="hero">
+    <h1 class="hero-title">Hello, I'm Roshan.</h1>
+    <p class="hero-subtitle">Welcome to my digital garden. I write about code, design, and everything in between.</p>
+</div>
+
+<div class="container">
+    <div class="grid">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="card">
+            <span class="card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2 class="card-title">{{ post.title | escape }}</h2>
+            <p class="card-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 20 }}
+            </p>
+        </a>
+        {% endfor %}
+    </div>
+</div>

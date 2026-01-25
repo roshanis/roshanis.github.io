@@ -1,0 +1,19 @@
+title: Roshan's Blog
+email: roshan.venugopal@gmail.com
+description: >-
+  A casual space for my thoughts, code, and ideas.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: roshanvenugopal
+github_username: roshanvenugopal
+linkedin_username: roshan-venugopal # Placeholder, user can update
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
