@@ -4,6 +4,7 @@ layout: default
 
 {% assign words = content | number_of_words %}
 {% assign read_time = words | divided_by: 200 | plus: 1 %}
+
 <article class="post">
 
     <a href="{{ " /" | relative_url }}" class="back-btn">&larr; Back to Home</a>
