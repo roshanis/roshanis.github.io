@@ -2,12 +2,36 @@
 layout: default
 ---
 
-<div class="hero fade-up">
-    <h1 class="hero-title">Hello, I'm Roshan.</h1>
-    <p class="hero-subtitle">Welcome to my digital garden. I write about code, design, and everything in between.</p>
-</div>
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-content fade-up">
+            <p class="hero-kicker">Scandinavian Night Notes</p>
+            <h1 class="hero-title">Hello, I'm Roshan.</h1>
+            <p class="hero-subtitle">Welcome to my digital garden. I write about code, design, and everything in between.</p>
+            <div class="hero-tags">
+                <span>Code</span>
+                <span>Design</span>
+                <span>Systems</span>
+            </div>
+        </div>
+        {% assign latest = site.posts | first %}
+        {% if latest %}
+        <div class="hero-panel fade-up">
+            <p class="panel-label">Latest entry</p>
+            <h2 class="panel-title"><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
+            <p class="panel-meta">{{ latest.date | date: "%B %d, %Y" }}</p>
+            <p class="panel-excerpt">{{ latest.excerpt | strip_html | truncatewords: 18 }}</p>
+            <a class="panel-link" href="{{ latest.url | relative_url }}">Read now</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
 
-<div class="container">
+<section class="section">
+    <div class="section-head fade-up">
+        <h2 class="section-title">Essays and notes</h2>
+        <p class="section-subtitle">Short and long form reflections from code to craft.</p>
+    </div>
     <div class="grid">
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}" class="card fade-up"
@@ -20,16 +44,14 @@ layout: default
         </a>
         {% endfor %}
     </div>
+</section>
 
-    <!-- Newsletter Mockup -->
-    <div class="newsletter fade-up">
-        <h2 class="newsletter-title">Stay in the loop</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Subscribe to get the latest posts delivered straight
-            to your inbox.</p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-            <input type="email" placeholder="roshan@example.com" class="newsletter-input"
-                style="flex: 1; min-width: 250px;">
-            <button class="newsletter-btn">Join Newsletter</button>
-        </div>
+<section class="newsletter fade-up">
+    <p class="newsletter-kicker">Field notes</p>
+    <h2 class="newsletter-title">Stay in the loop</h2>
+    <p class="newsletter-subtitle">Subscribe to get the latest posts delivered straight to your inbox.</p>
+    <div class="newsletter-row">
+        <input type="email" placeholder="roshan@example.com" class="newsletter-input">
+        <button class="newsletter-btn">Join Newsletter</button>
     </div>
-</div>
+</section>
