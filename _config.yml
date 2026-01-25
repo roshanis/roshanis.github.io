@@ -5,7 +5,7 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: roshanvenugopal
-github_username: roshanvenugopal
+github_username: roshanis
 linkedin_username: roshanvenugopal
 
 # Build settings
