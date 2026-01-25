@@ -9,7 +9,7 @@ github_username: roshanis
 linkedin_username: roshanvenugopal
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
