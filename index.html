@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="hero">
+<div class="hero fade-up">
     <h1 class="hero-title">Hello, I'm Roshan.</h1>
     <p class="hero-subtitle">Welcome to my digital garden. I write about code, design, and everything in between.</p>
 </div>
@@ -10,13 +10,26 @@ layout: default
 <div class="container">
     <div class="grid">
         {% for post in site.posts %}
-        <a href="{{ post.url | relative_url }}" class="card">
-            <span class="card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a href="{{ post.url | relative_url }}" class="card fade-up"
+            style="animation-delay: {{ forloop.index | times: 0.1 }}s">
+            <span class="card-date">{{ post.date | date: "%B %d, %Y" }}</span>
             <h2 class="card-title">{{ post.title | escape }}</h2>
             <p class="card-excerpt">
-                {{ post.excerpt | strip_html | truncatewords: 20 }}
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
             </p>
         </a>
         {% endfor %}
+    </div>
+
+    <!-- Newsletter Mockup -->
+    <div class="newsletter fade-up">
+        <h2 class="newsletter-title">Stay in the loop</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Subscribe to get the latest posts delivered straight
+            to your inbox.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            <input type="email" placeholder="roshan@example.com" class="newsletter-input"
+                style="flex: 1; min-width: 250px;">
+            <button class="newsletter-btn">Join Newsletter</button>
+        </div>
     </div>
 </div>

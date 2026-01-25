@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roshan's Blog (Tokyo Lights Preview)</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar" style="width: 45%;"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <a class="nav-brand" href="#">Roshan's Blog</a>
+            <div class="nav-links">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">GitHub</a>
+                <a class="nav-link" href="#">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+
+        <div class="hero fade-up">
+            <h1 class="hero-title">Hello, I'm Roshan.</h1>
+            <p class="hero-subtitle">Welcome to my digital garden. I write about code, design, and everything in
+                between.</p>
+        </div>
+
+        <div class="container">
+            <div class="grid">
+                <a href="#" class="card fade-up" style="animation-delay: 0.1s">
+                    <span class="card-date">January 25, 2025</span>
+                    <h2 class="card-title">Cyber-noir Aesthetics</h2>
+                    <p class="card-excerpt">Exploring the neon-lit world of modern web design and how to build immersive
+                        digital experiences.</p>
+                </a>
+                <a href="#" class="card fade-up" style="animation-delay: 0.2s">
+                    <span class="card-date">January 24, 2025</span>
+                    <h2 class="card-title">Tokyo Night Design</h2>
+                    <p class="card-excerpt">A deep dive into the color theory behind the most popular cyber-noir themes
+                        in the developer community.</p>
+                </a>
+            </div>
+
+            <div class="newsletter fade-up">
+                <h2 class="newsletter-title">Stay in the loop</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Subscribe to get the latest posts delivered
+                    straight to your inbox.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <input type="email" placeholder="roshan@example.com" class="newsletter-input">
+                    <button class="newsletter-btn">Join Newsletter</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 100px; padding: 50px; border-top: 1px dashed #333; text-align: center; color: #666;">
+            --- PREVIEW OF POST LAYOUT BELOW ---
+        </div>
+
+        <div class="container">
+            <article class="post">
+                <a href="#" class="back-btn">
+                    <span>&larr;</span> Back to Home
+                </a>
+                <header class="post-header">
+                    <h1 class="post-title">The Neon Revolution</h1>
+                    <p class="post-meta">
+                        <span>January 25, 2025</span>
+                        <span>&bull;</span>
+                        <span>3 min read</span>
+                    </p>
+                </header>
+
+                <div class="post-content">
+                    <p>The city never sleeps. In the world of web design, the neon aesthetic is more than just a
+                        trend—it's a statement about the future of interaction.</p>
+
+                    <h2>The Grid Background</h2>
+                    <p>Using a CSS grid background with a radial mask creates depth and focus, reminiscent of old-school
+                        cyberpunk films but with a modern twist.</p>
+
+                    <p><code>console.log("Welcome to Tokyo Lights");</code></p>
+                </div>
+            </article>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Roshan's Blog. Inspired by Tokyo Lights.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+
+</html>

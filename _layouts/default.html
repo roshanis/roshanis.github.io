@@ -12,15 +12,25 @@
 
     <link rel="stylesheet" href="{{ " /assets/css/style.css" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    <!-- Social Meta Labels -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
 
+    <div class="noise-overlay"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <nav class="navbar">
-        <div class="container" style="width: 100%; display: flex; justify-content: space-between;">
+        <div class="container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
             <a class="nav-brand" href="{{ " /" | relative_url }}">{{ site.title | escape }}</a>
             <div class="nav-links">
                 <a class="nav-link" href="{{ " /" | relative_url }}">Home</a>
@@ -38,9 +48,18 @@
 
     <footer>
         <div class="container">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}. Built with Jekyll.</p>
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | escape }}. Inspired by premium design.</p>
         </div>
     </footer>
+
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
 
 </body>
 
