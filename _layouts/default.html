@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,500;6..72,700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ " /assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=20250125" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
     <!-- Social Meta Labels -->
@@ -30,9 +30,9 @@
 
     <nav class="navbar">
         <div class="container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <a class="nav-brand" href="{{ " /" | relative_url }}">{{ site.title | escape }}</a>
+            <a class="nav-brand" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
             <div class="nav-links">
-                <a class="nav-link" href="{{ " /" | relative_url }}">Home</a>
+                <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
                 <a class="nav-link" href="https://github.com/{{ site.github_username }}">GitHub</a>
                 <a class="nav-link" href="https://linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
             </div>
